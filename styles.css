@@ -1,42 +1,23 @@
-@font-face {
-    font-family: "iran-yekan";
-    src: 
-         url("/keygen/iranyekanwebregularfanum.woff") format("woff");
-}
-
 body {
-    font-family: "iran-yekan", sans-serif;
-    background-color: #17153B;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     margin: 0;
 }
 
-.container {
-    background: #2E236C;;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 10px 30px;
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-    color:#fff;
-}
-
-h1 {
-    margin-bottom: 25px;
-    font-size: 24px;
-    color: #fff;
-}
-
+/* Add a max height and enable scrolling for the game options */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     margin-bottom: 20px;
+    max-height: 300px; /* Adjust this height based on your layout needs */
+    overflow-y: auto;
+    padding-right: 10px;
 }
 
 .game-option {
@@ -48,6 +29,30 @@ h1 {
     transition: transform 0.3s, border-color 0.3s;
 }
 
+/* Ensure the selected game stands out */
+.game-option.selected {
+    transform: scale(1.05);
+    border-color: #007bff;
+    background-color: #f0f8ff; /* Optional: Slight background color change */
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #007bff;
+}
+
+
 .game-option img {
     width: 100%;
     border-radius: 8px;
@@ -56,12 +61,12 @@ h1 {
 
 .game-option p {
     font-weight: 500;
-    color: #fff;
+    color: #555;
 }
 
 .game-option:hover, .game-option.selected {
     transform: scale(1.05);
-    border-color: #564db0;
+    border-color: #007bff;
 }
 
 .form-group {
@@ -70,12 +75,10 @@ h1 {
 }
 
 label {
-    text-align: center;
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
-    color: #fff;
-    padding-top: 20px;
+    color: #555;
 }
 
 .key-slider {
@@ -100,23 +103,23 @@ label {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background:  #564db0;
+    background: #007bff;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 .key-slider input[type="range"]:hover::-webkit-slider-thumb {
-    background:  #433D8B;
+    background: #0056b3;
 }
 
 #keyValue {
     font-size: 18px;
     font-weight: bold;
-    color: #fff;
+    color: #007bff;
 }
 
 button {
-    background-color: #433D8B;
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -124,12 +127,11 @@ button {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 20px;
-    font-family: 'iran-yekan';
+    margin-top: 20px;
 }
 
 button:hover {
-    background-color: #564db0;
+    background-color: #0056b3;
 }
 
 .hidden {
@@ -137,7 +139,7 @@ button:hover {
 }
 
 .progress-bar {
-    background-color: #17153B;
+    background-color: #f5f7fa;
     border-radius: 8px;
     overflow: hidden;
     margin-top: 25px;
@@ -147,7 +149,7 @@ button:hover {
 
 .progress-bar div {
     height: 100%;
-    background-color: #564db0;
+    background-color: #007bff;
     width: 0;
     transition: width 0.5s;
 }
@@ -190,10 +192,10 @@ button:hover {
 .footer {
     margin-top: 25px;
     font-size: 14px;
-    color: #aba3a3;
+    color: #777;
 }
 
 #copyStatus {
     margin-top: 15px;
     color: green;
-    }
+        }
