@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const EVENTS_DELAY = 20000;
 
-  const games = {
-  1: {
+   const games = {
+        1: {
             name: 'Riding Extreme 3D',
             appToken: 'd28721be-fd2d-4b45-869e-9f253b554e50',
             promoId: '43e35910-c168-4634-ad4f-52fd764a843f',
@@ -92,8 +92,15 @@ document.addEventListener("DOMContentLoaded", () => {
             promoId: '04ebd6de-69b7-43d1-9c4b-04a6ca3305af',
             timing: 20000, // 40 seconds
             attempts: 30,
+        },
+       14: {
+            name: 'Bouncemasters',
+            appToken: 'bc72d3b9-8e91-4884-9c33-f72482f0db37',
+            promoId: 'bc72d3b9-8e91-4884-9c33-f72482f0db37',
+            timing: 20000, // 40 seconds
+            attempts: 30,
         }
-  };
+    };
 
   const gameOptions = document.querySelectorAll(".game-option");
   const keyCountGroup = document.getElementById("keyCountGroup");
@@ -182,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const hasCode = await emulateProgress(clientToken, game.promoId);
         updateProgress(
           100 / game.attempts / keyCount,
-          ` ... ${i + 1}/${game.attempts} منتظر بمانید`
+          ` ... ${i + 1}/${game.attempts} تعداد تلاش`
         );
         if (hasCode) {
           break;
